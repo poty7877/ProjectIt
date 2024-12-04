@@ -1,0 +1,78 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.11'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // 2024-11-05 용상엽 추가  @NotNull 사용하기 위함.
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    compileOnly 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok' //테스트용-log4j2용
+    testAnnotationProcessor 'org.projectlombok:lombok' //테스트용-log4j2용
+    //annotationProcessor 'org.projectlombok:lombok'  //어노테이션으로 lombook 세팅
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+
+    //ModelMapper 추가
+    implementation 'org.modelmapper:modelmapper:3.1.1'
+    //섬네일 추가
+    implementation 'net.coobird:thumbnailator:0.4.19'
+    //시큐리티 추가
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //json 데이터 생성(p.315)
+    implementation 'com.google.code.gson:gson:2.10.1'
+    //JWT
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    // 2024-11-05 용상엽 추가  @NotNull 사용하기 위함.
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    // 2024-11-15 용상엽 추가 queryDsl 사용하기 위함.
+    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+    annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"
+    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+
+    // LocalDateTime을 JackSon에서 직렬화와 역직렬화를 할 수 있도록 도와줌
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

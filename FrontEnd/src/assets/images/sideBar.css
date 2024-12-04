@@ -1,0 +1,15 @@
+.nav-link:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.sidebarNav {
+    font-size: 0.9rem;
+}
+.sidenav-bg {
+    transition: all 0.3s ease;
+}
+.sidenav-bg:hover {
+    background: #e9ecef;
+    border-radius: 5px;
+}
