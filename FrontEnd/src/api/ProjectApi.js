@@ -1,7 +1,7 @@
 import axios from "axios";
 
 /*const API_SERVER_HOST = 'http://192.168.0.212/it'*/
-const API_PRODUCT_HOST = `http://mbc-webcloud.iptime.org:8103/api/project`
+const API_PRODUCT_HOST = `http://ysy.tplinkdns.com:8003/api/project`
 const list = `${API_PRODUCT_HOST}/list`
 
 

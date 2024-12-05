@@ -156,7 +156,7 @@ const DocumentRequestListComponent = () => {
     }, [location.search]); // query string 변경 시 다시 fetch
 
     useEffect(() => {
-        const socket = new WebSocket('ws://mbc-webcloud.iptime.org:8103/ws/alarms');
+        const socket = new WebSocket('ws://ysy.tplinkdns.com:8003/ws/alarms');
 
         socket.onopen = () => {
             console.log('웹소켓 오픈!');

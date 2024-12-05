@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_PRODUCT_HOST = `http://mbc-webcloud.iptime.org:8103/api/projectpartner`
+const API_PRODUCT_HOST = `http://ysy.tplinkdns.com:8003/api/projectpartner`
 
 // 고객사 정보 등록
 export const postAdd = async (projectPartner) => {

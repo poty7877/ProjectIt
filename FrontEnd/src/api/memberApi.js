@@ -1,7 +1,7 @@
 import axios from "axios";
 import data from "bootstrap/js/src/dom/data";
 
-const API_SERVER_HOST = 'http://mbc-webcloud.iptime.org:8102/it'
+const API_SERVER_HOST = 'http://ysy.tplinkdns.com:8002/it'
 
 const host = `${API_SERVER_HOST}/members`
 

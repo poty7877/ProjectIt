@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_PRODUCT_HOST = `http://mbc-webcloud.iptime.org:8103/api/pissue`
-const list = `http://mbc-webcloud.iptime.org:8103/api/project/list`
-const API_REPLY_HOST = `http://mbc-webcloud.iptime.org:8103/api/reply`
+const API_PRODUCT_HOST = `http://ysy.tplinkdns.com:8003/api/pissue`
+const list = `http://ysy.tplinkdns.com:8003/api/project/list`
+const API_REPLY_HOST = `http://ysy.tplinkdns.com:8003/api/reply`
 
 // Project List
 export const getList = async (pageParam) => {

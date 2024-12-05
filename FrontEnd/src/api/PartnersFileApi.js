@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_PARTNERS_HOST = `http://mbc-webcloud.iptime.org:8103/api/partners/file`
+const API_PARTNERS_HOST = `http://ysy.tplinkdns.com:8003/api/partners/file`
 
 // ProjectIssueFiles Register
 export const postUploadFile = async (uploadFiles, cno) => {

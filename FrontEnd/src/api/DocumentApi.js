@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_DOCUMENT_HOST = `http://mbc-webcloud.iptime.org:8103/api/document`
+const API_DOCUMENT_HOST = `http://ysy.tplinkdns.com:8003/api/document`
 
 
 // 결재 대기중 리스트

@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const API_DISTRIBUSUION_HOST = "http://mbc-webcloud.iptime.org:8101"
+export const API_DISTRIBUSUION_HOST = "http://ysy.tplinkdns.com:8001"
 const prefix = `${API_DISTRIBUSUION_HOST}/dist/computer`
 const lno = 0
 const ano = 0

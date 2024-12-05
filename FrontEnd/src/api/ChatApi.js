@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_CHATROOM_HOST = `http://mbc-webcloud.iptime.org:8103/api/chatroom`
-const API_CHATMESSAGE_HOST = `http://mbc-webcloud.iptime.org:8103/api/chat`
+const API_CHATROOM_HOST = `http://ysy.tplinkdns.com:8003/api/chatroom`
+const API_CHATMESSAGE_HOST = `http://ysy.tplinkdns.com:8003/api/chat`
 
 // 채팅방 가져오기
 export const getChatRoom = async (pno) => {

@@ -16,7 +16,6 @@ const Header = () => {
   // 쿠키에서 accessToken 읽기
   useEffect(() => {
     const token = getCookie('member'); // 쿠키에서 'member' 토큰 가져오기
-    console.log("Token from cookie: ", token);
     if (token) {
       setAccessToken(token); // 토큰이 존재하면 상태 업데이트
     } else {
@@ -82,7 +81,7 @@ const Header = () => {
             <DropdownToggle color="transparent">
               <img src={user1} alt="profile" className="rounded-circle" width="30" />
             </DropdownToggle>
-            <DropdownMenu>
+            <DropdownMenu key={isLogin ? "loggedIn" : "loggedOut"}>
               <DropdownItem header>Info</DropdownItem>
               {isLogin ? (
                   <>
@@ -91,11 +90,12 @@ const Header = () => {
                   </>
               ) : (
                   <>
-                    {/* 로그인 및 회원가입 관련 메뉴를 추가할 수 있음 */}
                     <DropdownItem onClick={handleClickLogin}>로그인하기</DropdownItem>
                   </>
               )}
             </DropdownMenu>
+
+
           </Dropdown>
         </Collapse>
       </Navbar>
