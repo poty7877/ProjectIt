@@ -17,6 +17,11 @@ Spring Boot와 React를 활용해 IT 기업에서 사용할 수 있는 ERP 시�
   - 자원 관리 (등록, 수정, 상태관리)
 
 
+## 프로젝트 설명 영상
+[![Watch the video](https://img.youtube.com/vi/cYiKhlWzpkM/0.jpg)](https://www.youtube.com/watch?v=cYiKhlWzpkM)
+
+
+
 
 ## 🛠️ 사용 기술
 - **Backend:** Spring Boot, JPA, MariaDB, MongoDB  
