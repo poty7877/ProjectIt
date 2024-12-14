@@ -16,18 +16,33 @@ Spring Boot와 React를 활용해 IT 기업에서 사용할 수 있는 ERP 시�
   - 프로젝트 관리 (등록, 수정, 일정 및 상태관리)
   - 자원 관리 (등록, 수정, 상태관리)
 
+## 시스템 아키텍쳐 요약
+- **1.백엔드**
+  - 기술 스택 : Spring Boot
+  - 배포 : 개인 서버 (windows 10)
+  - 환경 : java -jar 명령어로 실행되는 Spring Boot 애플리케이션, Docker 없이 로컬 환경에서 실행
+  - 특징: AWS 대신 로컬 컴퓨터에서 자체 서버를 사용하여 애플리케이션을 배포.
+    -  관리 및 확장성: 로컬 환경에서 bootjar 파일을 실행하여 애플리케이션을 간단히 배포하고 실행. 필요한 경우 추가 서버나 프로세스를 통해 확장 가능.
+
+- **2.프론트엔드**
+  - 기술 스택 : React
+  - 배포 : 개인 서버
+  - 콘텐츠 전송 : Nginx를 통해 효율적인 콘텐츠 제공
+  - 특징 : React애플리케이션은 Spring Boot와 같은 서버에 배포되며, 정적 파일을 서비스
+    - 빌드된 React애플리케이션의 정적파일은 Nginx 웹서버에서 제공되어, 빠르고 호율적인 콘텐츠 전달이 가능.
+    - Nginx가 제공하는 캐싱 및 압축 기능을 활용하여 빠른 페이지 로딩속도를 제공, 단일 서버 환경에서 애플리케이션과 정적 파일을 모두 호스팅.
+   
+- **3.협업 관리**
+  - 도구 : SourceTree
+  - 특징 : CI/CD 자동화 도구 없이 팀원 간의 협업과 배포는 수동으로 관리되며, 필요한 경우 배포 후 로그나 에러를 직접 점검.
+ 
+- **4.데이터베이스**
+  - 기술 스택 : MariaDB, MongoDB
+  - 저장소 : 개인 서버
+  - 특징 : 대부분의 데이터는 SQL쿼리를 사용해 관리 및 검색을 최적화 하고 있으나, 채팅 메시지의 경우 MongoDB를 사용하여 많은데이터를 효율적으로 처리가능.
 
 ## 프로젝트 설명 영상
 [![Watch the video](https://img.youtube.com/vi/cYiKhlWzpkM/0.jpg)](https://www.youtube.com/watch?v=cYiKhlWzpkM)
-
-
-
-
-## 🛠️ 사용 기술
-- **Backend:** Spring Boot, JPA, MariaDB, MongoDB  
-- **Frontend:** React, Redux  
-- **Authentication:** JWT 기반 인증  
-- **Deployment:** Nginx
 
 ## 🙋‍♂️ ** 개인 역할 및 기여 **
 ### 1. **백엔드 개발**
